@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                #demo1 {
+                        width: 100px;
+                        height: 100px;
+                        background-color: red;
+                }
+                #demo2 {
+                        width: 100px;
+                        height: 100px;
+                        background-color: blue;
+                }
+                img {
+                        width: 100px;
+                        height: 100px;
+                }
+        </style>
+
+</head>
+
+<body>
+        <div id="demo1" ondragover="choThaVao()" ondrop="thaXong()"></div>
+        <img src="./image/img-1.png" alt="" draggable="true" ondragstart="batDauKeo()">
+        <div id="demo2" ondragover="choThaVao()" ondrop="thaXong()"></div>
+        <img src="./image/img-2.png" alt="" draggable="true" ondragstart="batDauKeo()">
+        <script>
+                let p;
+
+                function batDauKeo() {
+                        p = event.target;
+                }
+                function choThaVao() {
+                        event.preventDefault();
+                }
+                function thaXong() {
+                        console.log(event.target.firstElementChild);
+                        if (event.target.firstElementChild === null) {
+                                event.target.appendChild(p);
+                                console.log(event.target.firstElementChild);
+                        }
+                        else {
+                                console.log("not ok");
+                        }
+                        console.log(event.target.firstElementChild);
+
+                }
+        </script>
+</body>
+
+</html>
