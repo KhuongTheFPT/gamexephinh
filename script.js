@@ -68,7 +68,8 @@ function upLoadFile() {
                 console.log(localStorage);
                 document.getElementsByTagName("img")[i].src = localStorage.getItem(`img${i}`);
         }
-        alert(`Upload thành công ${urlImg.length} ảnh mẫu`);
+        alert(`Upload thành công ${arrImg.length} ảnh mẫu`);
+        console.log(arrImg.length);
 }
 
 
@@ -118,8 +119,8 @@ window.onload = function () {
         }
         else {
                 for (let i = 0; i < 25; i++) {
-                        urlImg[i] = "./image1/img-10.png";
-                        document.getElementsByTagName("img")[i].src = "./image1/img-10.png";
+                        urlImg[i] = "./image1/img-26.png";
+                        document.getElementsByTagName("img")[i].src = "./image1/img-26.png";
                         
                 }  
         }
